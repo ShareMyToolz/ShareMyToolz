@@ -1,7 +1,6 @@
 $(function(){
-    $("#emailForm").submit(function(e) {
+    $("#sendForm").click(function(e) {
         if($("#email").val()) {
-            alert($("#email").val());
             mixpanel.track($("#email").val());
         }
     });
