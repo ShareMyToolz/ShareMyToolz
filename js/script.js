@@ -1,13 +1,11 @@
 $(function(){
-    function Generator() {};
-    Generator.prototype.rand =  Math.floor(Math.random() * 26) + Date.now();
-
-    Generator.prototype.getId = function() {
-        return this.rand++;
-    };
-    var idGen =new Generator();
+    var ip;
     
-    mixpanel.identify(idGen.getId());
+    $.get("http://ipinfo.io", function(response) {
+        ip = response.ip;
+    }, "jsonp");
+    
+    mixpanel.identify(ip);
     mixpanel.track("Arrival");
     
     $("#sendForm").click(function(e) {
@@ -19,6 +17,5 @@ $(function(){
             mixpanel.track("Subscribe");
             $("#email").val('').placeholder();
         }
-    });
-    
+    });  
 });
