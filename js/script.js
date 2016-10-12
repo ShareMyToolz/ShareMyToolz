@@ -1,5 +1,7 @@
 $(function(){
+    mixpanel.identify();
     mixpanel.track("Arrival");
+    
     $("#sendForm").click(function(e) {
         if($("#email").val()) {
             mixpanel.people.set({
