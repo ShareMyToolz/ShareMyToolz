@@ -1,11 +1,6 @@
 $(function(){
-    var ip;
-    
-    $.get("http://ipinfo.io", function(response) {
-        ip = response.ip;
-        mixpanel.identify(ip);
-        mixpanel.track("Arrival");
-    }, "jsonp");
+    mixpanel.identify();
+    mixpanel.track("Arrival");
     
     $("#sendForm").click(function(e) {
         if($("#email").val()) {

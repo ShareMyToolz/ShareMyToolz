@@ -4,6 +4,11 @@ Made with love by Creative Tim (http://www.creative-tim.com)
 
 */
 
+@font-face {
+    font-family: myFont;
+    src: url(GrandHotel-Regular.otf);
+}
+
 body{
     
 }
@@ -735,11 +740,11 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     position: relative;
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
-    margin-top: 150px;
+    margin-top: 50px;
     z-index: 3;
 }
 .main .logo.cursive{
-    font-family: 'Grand Hotel';
+    font-family: myFont;
     font-size: 82px;
     
 }
@@ -823,7 +828,6 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
         width: 190px;
     }   
     .footer{
-        position: fixed;
         bottom: 20px;
     }
 }
@@ -937,3 +941,4 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     }
 
 }
+
